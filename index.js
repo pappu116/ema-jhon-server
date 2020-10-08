@@ -21,8 +21,8 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 client.connect((err) => {
-  const productsCollection = client.db("emaJhonStore").collection("products");
-  const ordersCollection = client.db("emaJhonStore").collection("orders");
+  const productsCollection = client.db("emaJohnStor2").collection("products");
+  const ordersCollection = client.db("emaJohnStor2").collection("orders");
 
   //data add or post Code
 
