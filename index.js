@@ -40,8 +40,9 @@ client.connect((err) => {
   //***********************get method code start*************
 
   app.get("/products", (req, res) => {
+    const search = req.query.search;
     productsCollection
-      .find({})
+      .find({ name: { $regex: search } })
       .limit(10)
       .toArray((err, documents) => {
         res.send(documents);
